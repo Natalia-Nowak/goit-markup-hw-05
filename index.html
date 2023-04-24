@@ -30,8 +30,12 @@
             >Web<span class="logo-shadow">Studio</span></a
           >
           <ul class="container-menu container-menu-nav">
-            <li><a class="nav-link" href="#">Agencja</a></li>
+            <li class="nav-underline nav-underline-agency">
+              <a class="nav-link" href="index.html">Agencja</a>
+            </li>
+
             <li><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+
             <li><a class="nav-link" href="#">Kontakt</a></li>
           </ul>
         </nav>
@@ -58,7 +62,18 @@
       <section class="top-row section">
         <div class="container container-head-row">
           <h1 class="top-header">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
-          <button type="button" class="button-primary">Zamów usługe</button>
+          <button data-modal-open type="button" class="button-primary">
+            Zamów usługe
+          </button>
+        </div>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <button class="button-modal" data-modal-close>
+              <svg width="30px" height="30px" class="button-modal-icon">
+                <use href="./images/icons.svg#icon-close-icon"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
 
@@ -124,28 +139,43 @@
           <h2 class="header-primary">Czym się zajmujemy</h2>
           <ul class="container-photoboxes">
             <li>
-              <img
-                src="images/what_we_do_1.jpg"
-                alt="Person typing"
-                width="370"
-                height="294"
-              />
+              <figure class="photobox-block">
+                <img
+                  src="images/what_we_do_1.jpg"
+                  alt="Person typing"
+                  width="370"
+                  height="294"
+                />
+                <figcaption class="photobox-title">
+                  APLIKACJE KOMPUTEROWE
+                </figcaption>
+              </figure>
             </li>
             <li>
-              <img
-                src="images/what_we_do_2.jpg"
-                alt="Person holding phone"
-                width="370"
-                height="294"
-              />
+              <figure class="photobox-block">
+                <img
+                  src="images/what_we_do_2.jpg"
+                  alt="Person holding phone"
+                  width="370"
+                  height="294"
+                />
+                <figcaption class="photobox-title">
+                  APLIKACJE MOBILNE
+                </figcaption>
+              </figure>
             </li>
             <li>
-              <img
-                src="images/what_we_do_3.jpg"
-                alt="Person holding tablet"
-                width="370"
-                height="294"
-              />
+              <figure class="photobox-block">
+                <img
+                  src="images/what_we_do_3.jpg"
+                  alt="Person holding tablet"
+                  width="370"
+                  height="294"
+                />
+                <figcaption class="photobox-title">
+                  ROZWIĄZANIA GRAFICZNE
+                </figcaption>
+              </figure>
             </li>
           </ul>
         </div>
@@ -425,5 +455,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
